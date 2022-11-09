@@ -3,6 +3,9 @@
 
 NCP(Naver Cloud Platform)에서 Terraform을 이용한 프로비저닝에 대해서 다룹니다.
 
+NCP API key는 별도의 변수로 있으며, 따로 변수를 잡아주셔야 합니다.
+
+
 ## Architecture
 
 ![architecture](image/terraform-ncp.png "architecture")
@@ -16,7 +19,7 @@ NCP(Naver Cloud Platform)에서 Terraform을 이용한 프로비저닝에 대해
   4. stg LB subnet - 192.168.100.0/24 생성
   5. stg web subnet - 192.168.101.0/24 생성
 
-* [가이드](global.md)
+* [설정 구성](global.md)
 
 ## DEV
   - 서버 배포에 약 15분 정도 소요됩니다.
@@ -27,6 +30,8 @@ NCP(Naver Cloud Platform)에서 Terraform을 이용한 프로비저닝에 대해
   2. Network Loadbalancer 1대 생성
   3. Netowkr Loadbalancer를 이용해 Web Service
 
+* [설정 구성](dev.md)
+
 ## STG
   - 서버 배포에 약 15분 정도 소요됩니다.
   - 전체 생성 후 정상화 되는 데 5분 정도 소요됩니다.
@@ -36,3 +41,5 @@ NCP(Naver Cloud Platform)에서 Terraform을 이용한 프로비저닝에 대해
   2. ASG를 이용하여 Web Server 2대 생성
   3. Application Loadblanacer 1대 생성
   4. Application Loadblanacer를 이용해 Web Service
+
+* [설정 구성](stg.md)
